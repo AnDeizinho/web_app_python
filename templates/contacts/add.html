@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="container">
+    <form style="margin-top: 100px;" method="post" action="/contatos/add">
+        <div class="row">
+            <div class="col">
+                <label>Nome</label>
+                <input type="text" name="name" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Fone</label>
+                <input type="text" name="fone" class="form-control" placeholder="(00) 00000-0000">
+            </div>
+            <div class="col">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="fulano@email.com"  class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><button type="submit" class="btn btn-primary">Cadastrar</button></div>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <form style="margin-top: 100px;" method="post" action="/contatos/edit">
+        <div class="row">
+            <div class="col">
+                <label>id</label>
+                <input type="number" name="id" value="{{ contact.id }}" readonly class="form-control">
+            </div>
+            <div class="col">
+                <label>Nome</label>
+                <input type="text" name="name" value="{{ contact.name }}" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Fone</label>
+                <input type="text" name="fone" class="form-control" value="{{ contact.fone }}" placeholder="(00) 00000-0000">
+            </div>
+            <div class="col">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="fulano@email.com" value="{{ contact.email }}" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><button type="submit" class="btn btn-primary">Salvar</button></div>
+        </div>
+    </form>
+</div>
+{% endblock %}
